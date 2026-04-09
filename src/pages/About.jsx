@@ -47,6 +47,8 @@ export default function About() {
           Designed & engineered by <span>IFEMS</span>
         </div>
       </div>
+
+      
     </section>
   );
 }
