@@ -3,7 +3,7 @@ import Hero from "../components/Hero.jsx";
 import Skills from "../components/Skills.jsx";
 import Features from "../components/Features.jsx";
 import Testimonial from "../components/Testimonial.jsx";
-import Contact from "../components/Contact.jsx";
+import Contact from "../components/ContactSection.jsx";
 import Footer from "../components/Footer.jsx";
 
 import leftLogo from "../assets/ifemslogo.jpg";
