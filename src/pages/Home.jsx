@@ -8,12 +8,15 @@ import Footer from "../components/Footer.jsx";
 
 import leftLogo from "../assets/ifemslogo.jpg";
 import rightLogo from "../assets/ifemslogo1.jpg";
+import heroImg from "../assets/ifems-hero.png";
 
 function Home() {
     return (
         <>
             <Ova />
-            <Skills />
+            <Skills heroImg={<img src={heroImg} alt="IFEMS" /> } 
+            
+            />
 
             <Hero
                 leftLogo={<img src={leftLogo} alt="Left logo" />}

@@ -12,7 +12,7 @@ function FeatureCard({
   buttonText     // ✅ FIX
 }) {
   return (
-    <div className="feature-card">
+    <div id = "future" className="feature-card">
 
       <div className="card-icon-wrapper">
         {icon}

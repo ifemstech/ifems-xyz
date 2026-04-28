@@ -602,7 +602,7 @@
   --glow: 0;
   position: relative;
   width: 100%;
-  margin-top: clamp(350px, 25vh, 260px);
+  margin-top: clamp(200px, 25vh, 260px);
   min-height: 360px;
 
   display: flex;
@@ -1124,12 +1124,14 @@
 
 
 /* SOCIAL ICONS */
+/* SOCIAL ICONS */
 .footer-socials .social-icons {
   display: flex;
   gap: 14px;
 }
 
-.footer-socials span {
+/* change span → a */
+.footer-socials .social-icons a {
   width: 42px;
   height: 42px;
   border-radius: 50%;
@@ -1139,9 +1141,12 @@
   justify-content: center;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;              /* make icons visible */
+  text-decoration: none;     /* remove underline */
 }
 
-.footer-socials span:hover {
+/* hover stays the same */
+.footer-socials .social-icons a:hover {
   transform: translateY(-4px);
   box-shadow: 0 15px 35px rgba(255, 0, 0, 0.5);
 }
@@ -1561,4 +1566,136 @@ cursor:pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.skills-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  margin: 80px 0;
+  margin-top: 20px;
+
+}
+
+/* LEFT SIDE */
+.hero-left {
+  flex: 1;
+}
+
+/* RIGHT SIDE */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-right img {
+  width: 620px;
+  max-width: 100%;
+  border-radius: 12px;
+  margin-top: -60px;
+  filter: drop-shadow(0 0 60px rgba(255, 60, 60, 0.4));
+}
+
+/* HEADING */
+.skills-heading {
+  font-size: 5rem;
+  font-weight: 800; /* fixed */
+  color: #fff;
+  line-height: 1.2;
+  max-width: 800px;
+  text-align: left;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(90deg, #ff2d2d, #ff7a18, #ff2d2d);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 3s linear infinite;
+}
+
+/* Description */
+.skills-desc {
+  margin-top: 16px;
+  color: #aaa;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* Button */
+.get-started-btn {
+  position: relative;
+  margin-top: 22px;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #ff2d2d, #ff7a18);
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+/* Glow */
+.get-started-btn::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  background: linear-gradient(90deg, #ff2d2d, #ff7a18);
+  filter: blur(14px);
+  opacity: 0.7;
+  z-index: -1;
+}
+
+/* Shine */
+.get-started-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.4);
+  transform: skewX(-20deg);
+}
+
+.get-started-btn:hover {
+  transform: translateY(-4px) scale(1.04);
+}
+
+.get-started-btn:hover::after {
+  animation: shine 0.8s forwards;
+}
+
+/* Animations */
+@keyframes shine {
+  100% {
+    left: 130%;
+  }
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .skills-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-right {
+    justify-content: center;
+  }
+
+  .skills-heading {
+    font-size: 2.5rem;
+    text-align: center;
+  }
 }

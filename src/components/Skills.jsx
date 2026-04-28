@@ -1,34 +1,45 @@
+import React from "react";
 
-
-function Skills() {
+function Skills({heroImg}) {
   return (
     <section className="skills">
       <div className="skills-inner">
-        <div className="skills-subtitle">
-          A <span>PORTFOLIO DESIGN</span> VERSION <span>2026</span>
+
+        {/* 🔥 NEW HERO SECTION */}
+          <div className="skills-hero">
+  {/* LEFT */}
+      <div className="hero-left">
+          <h2 className="skills-heading">
+            We Build Digital Solutions <br />
+           <span className="gradient-text">That Drive Results</span>
+          </h2>
+
+        <p className="skills-desc">
+          From websites to Fintech solutions, IFEMS.XYZ Helps Brands scale faster with cutting-edge Digital experiences.
+        </p>
+
+        <button className="get-started-btn"
+                onClick={() => {
+
+                  document.getElementById("future").scrollIntoView({behavior: "smooth"});
+                }}
+        >
+          <span>OUR SERVICES</span>
+        </button>
+      </div>
+
+  {/* RIGHT */}
+        <div className="hero-right">
+          {heroImg}
         </div>
 
-        <h1 className="skills-title">
-          P<span className="star">✦</span>RTFOLIO
-        </h1>
 
-        <ul className="skills-list">
-          <li>Flight Ticket Booking</li>
-          <li>Crypto Trading Desk</li>
-          <li>GRAPHIC DESIGN</li>
-          <li>Crypto Trading Desk</li>
-          <li>Website Creation</li>
-          <li>Premium Subscriptions</li>
-          <li>Software Solutions</li>
-          <li>Global Payment Gateway</li>
-          <li>Domain & Hosting</li>
-          <li>AND MORE…</li>
-        </ul>
+        </div>
+
+    
       </div>
     </section>
   );
 }
 
 export default Skills;
-
- 
